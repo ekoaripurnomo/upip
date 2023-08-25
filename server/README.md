@@ -1,4 +1,5 @@
-rpc server
+# rpc server update client ip dynamic
 
-reff: https://github.com/tensor-programming/go-basic-rpc/blob/master/main.go
+running :
 
+# go run main.go
