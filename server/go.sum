@@ -1,0 +1,4 @@
+github.com/FlowerWrong/go-hostsfile v0.0.0-20180523020422-0a383d90e66a h1:k4YI/sQZxczSr76XlbnOkyOcNQkVQEru5uWrXNoQQFI=
+github.com/FlowerWrong/go-hostsfile v0.0.0-20180523020422-0a383d90e66a/go.mod h1:PaTJKDjLdBoHBtvZcAK3TJm7p9ZzMT016SxuTt6IDkM=
+github.com/txn2/txeh v1.5.3 h1:ZMgc3r+5/AFtE/ayCoICpvxj7xl/CYsZjnIGhozV/Kc=
+github.com/txn2/txeh v1.5.3/go.mod h1:qYzGG9kCzeVEI12geK4IlanHWY8X4uy/I3NcW7mk8g4=

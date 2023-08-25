@@ -9,6 +9,11 @@ import (
 	"github.com/rdegges/go-ipify"
 )
 
+type Ipname struct {
+	Ip       string
+	Hostname string
+}
+
 // Get IP public
 func getippub() string {
 	ip, err := ipify.GetIp()
@@ -30,7 +35,7 @@ func writeip(ip string) {
 }
 
 func main() {
-	var reply string
+	var reply Ipname
 	client, err := rpc.DialHTTP("tcp", "localhost:4040")
 	if err != nil {
 		log.Fatal("Connection error: ", err)
@@ -40,7 +45,15 @@ func main() {
 	fmt.Println("Your IP public:", ip)
 	writeip(ip)
 
-	// hostnm := fmt.Printf("computer_name %v", ip)
+	name, err := os.Hostname()
+	if err != nil {
+		panic(err)
+	}
 
-	client.Call("API.Writeiptotext", ip, &reply)
+	iphostname := Ipname{ip, name}
+
+	fmt.Println("IP computer:", iphostname.Ip)
+	fmt.Println("Hostname:", iphostname.Hostname)
+
+	client.Call("API.Writeiptotext", iphostname, &reply)
 }
